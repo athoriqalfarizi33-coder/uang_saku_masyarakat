@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duitly - Pengelola Uang Saku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Duitly</h1>
+        <p>Manage Your Money, Build Your Future</p>
+    </header>
+
+    <main class="container">
+
+      < !-- WELCOME -->  
+      <section class="welcome">
+            <h2>Halo, Semuanya</h2>
+            <p>Selamat datang di Duitly!
+                Yuk kelola uang sakumu dengan lebih bijak!
+            </p>
+        </section>
+
+      < !-- DASHBOARD -->  
+      <section class="summary">
+            
+        <div class="card">
+                <h3>Total Saldo</h3>
+                <p id="saldo">Rp0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Pemasukan</h3>
+                <p id="pemasukan">Rp0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Pengeluaran</h3>
+                <p id="pengeluaran">Rp0</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>Tambah Transaksi</h2>
+
+            <form id="formTransaksi">
+
+                <label for="keterangan">Keterangan</label>
+                <input type="text" id="keterangan"
+                    placeholder="Contoh: Uang saku dari Ayah"
+                    required>
+
+                <label for="jumlah">Jumlah (Rp)</label>
+                <input type="number" id="jumlah"
+                    min="1" placeholder="Masukkan nominal"
+                    required>
+
+                <label for="jenis">Jenis Transaksi</label>
+                <select id="jenis">
+                    <option value="pemasukan">Pemasukan</option>
+                    <option value="pengeluaran">Pengeluaran</option>
+                </select>
+
+                <button type="submit">Simpan Transaksi</button>
+
+            </form>
+        </section>
+
+        <section class="history">
+            <h2>Riwayat Transaksi</h2>
+
+            <div id="daftarTransaksi">
+                <p>Belum ada transaksi.</p>
+            </div>
+        </section>
+
+        <section class="saving">
+            <h2>Target Tabungan</h2>
+
+            <label for="target">Target tabungan (Rp)</label>
+            <input type="number" id="target"
+                min="1" placeholder="Contoh: 500000">
+
+            <button id="simpanTarget">Simpan Target</button>
+
+            <p id="progressText">Target belum ditentukan.</p>
+
+            <progress id="progress" value="0" max="100"></progress>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 SakuPintar | Belajar Mengelola Uang Sejak Dini</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
