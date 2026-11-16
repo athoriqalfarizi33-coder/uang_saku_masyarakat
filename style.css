@@ -1,0 +1,336 @@
+/* =========================
+   DUITLY - COLOR SYSTEM
+========================= */
+
+:root {
+    --primary: #145C43;
+    --primary-dark: #0E4532;
+    --primary-light: #EAF3ED;
+
+    --background: #F5F7F5;
+    --white: #FFFFFF;
+
+    --gold: #D6AE62;
+    --text: #25352D;
+    --muted: #78857D;
+
+    --border: #E3EAE5;
+
+    --income: #21865A;
+    --expense: #D65B5B;
+
+    --shadow: 0 5px 20px rgba(20, 92, 67, 0.06);
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    background: linear-gradient(
+        135deg,
+        #145C43,
+        #0E4532
+    );
+
+    color: var(--white);
+    text-align: center;
+    padding: 38px 20px;
+    border-bottom: 4px solid var(--gold);
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+}
+
+header h1 span {
+    color: var(--gold);
+}
+
+header p {
+    color: #DCEBE2;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 35px auto;
+}
+
+/* WELCOME */
+
+.welcome {
+    margin-bottom: 25px;
+}
+
+.welcome h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+    color: var(--primary-dark);
+}
+
+.welcome p {
+    color: var(--muted);
+}
+
+/* DASHBOARD */
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+/* CARDS */
+
+.card {
+    background: var(--white);
+    padding: 25px 22px;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 9px 25px rgba(20, 92, 67, 0.10);
+}
+
+.card h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 23px;
+    font-weight: 750;
+    color: var(--primary);
+    overflow-wrap: anywhere;
+}
+
+/* CONTENT SECTIONS */
+
+.form-section,
+.history,
+.saving {
+    background: var(--white);
+    padding: 27px;
+    border-radius: 15px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    margin-bottom: 22px;
+}
+
+h2 {
+    color: var(--primary-dark);
+    margin-bottom: 18px;
+    font-size: 21px;
+}
+
+/* FORM */
+
+label {
+    display: block;
+    margin: 15px 0 7px;
+    font-size: 14px;
+    font-weight: 650;
+    color: var(--text);
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: #FAFCFA;
+    color: var(--text);
+    font-size: 14px;
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(20, 92, 67, 0.10);
+}
+
+input::placeholder {
+    color: #A5AEA8;
+}
+
+/* BUTTON */
+
+button {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 13px 21px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 650;
+    cursor: pointer;
+    margin-top: 18px;
+
+    transition: background 0.2s,
+                transform 0.2s;
+}
+
+button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* TRANSACTION HISTORY */
+
+.transaksi {
+    padding: 17px 0;
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.transaksi strong {
+    color: var(--text);
+    font-size: 14px;
+}
+
+.transaksi small {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.masuk {
+    color: var(--income);
+    font-weight: 750;
+}
+
+.keluar {
+    color: var(--expense);
+    font-weight: 750;
+}
+
+.transaksi button {
+    background: #FCEAEA;
+    color: var(--expense);
+    padding: 7px 12px;
+    margin-top: 7px;
+    font-size: 12px;
+}
+
+.transaksi button:hover {
+    background: #F7DADA;
+}
+
+/* SAVING TARGET */
+
+#progressText {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 17px;
+}
+
+progress {
+    width: 100%;
+    height: 13px;
+    margin-top: 12px;
+    accent-color: var(--primary);
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--primary-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 28px 15px;
+    margin-top: 40px;
+}
+
+footer h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+footer p {
+    color: #DCEBE2;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 650px) {
+
+    .container {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    .summary {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card p {
+        font-size: 21px;
+    }
+
+    .form-section,
+    .history,
+    .saving {
+        padding: 20px;
+    }
+
+    .welcome h2 {
+        font-size: 22px;
+    }
+
+    header h1 {
+        font-size: 31px;
+    }
+
+    .transaksi {
+        align-items: flex-start;
+    }
+}
